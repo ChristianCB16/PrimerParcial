@@ -82,29 +82,30 @@ a.hide-desktop {
 .big-hero p {
     font-size: 0.7em;;
     color: #D7DEE6;
-    padding-bottom: 0;
 
 }
 
 /* Social links*/
 .social-links{
-
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex; 
     flex-direction: row;
     justify-content: center;
-
 }
 
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
+}
+
+.social-links li a i {
+    display: flex;
     align-items: flex-start;
     font-size: 4.5em;
-    margin: 15px 15px 0px;
-}
+    margin: 10px 10px;
+  }
 
 
 .green-area {
