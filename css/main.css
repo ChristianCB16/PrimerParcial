@@ -177,6 +177,10 @@ a.hide-desktop {
 
 /* About */
 
+.about .container {
+    margin: 1em;
+  }
+  
 .about{
     margin-top: 2em;
 }
@@ -193,7 +197,7 @@ a.hide-desktop {
 }
 
 .bio-info p{
-    font-size: 16px;
+    font-size: 15px;
     padding: 2em;
     text-align: left;
     line-height: 25px;
@@ -230,11 +234,19 @@ a.hide-desktop {
     color: #D7DEE6; 
 } 
  
-:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+:-moz-placeholder { 
+    /* Firefox 18- */ 
+    color: #D7DEE6; 
+} 
  
-::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+::-moz-placeholder { 
+    /* Firefox 19+ */ 
+    color: #D7DEE6; 
+} 
  
-:-ms-input-placeholder { color: #D7DEE6; }
+:-ms-input-placeholder { 
+    color: #D7DEE6; 
+}
 
 .contact-form input[type=submit] {
     background-color: #F74442;
@@ -253,9 +265,13 @@ footer{
 }
 
 footer .social-links {
-    margin: 0;
+    margin-top: 0.5em;
 }
 
+.hide-mobile {
+    display: none;
+  }
+  
 .menu {
     background-color: #112935;
     position: absolute;
