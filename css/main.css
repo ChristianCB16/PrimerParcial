@@ -38,8 +38,8 @@ p{
 }
 
 .logo {
-    width: 90px;
-    margin: 1em;
+    width: 110px;
+    margin: 2em;
 }
 
 .options {
@@ -60,10 +60,17 @@ p{
     margin-right: 0.5em; 
 }
 
+.options .fas {
+    display: inherit;
+  }
+
 /* Big area */
 .big-hero img {
     width: 150px;
 }
+a.hide-desktop {
+    width: 1.5em;
+  }
 
 .big-hero h2 {
     font-size: 1.875em;
