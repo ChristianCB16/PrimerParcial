@@ -50,6 +50,7 @@ p{
     right: 95%;
     font-size: 2.5rem;
 
+    /* Cambiar de posicion el fa-times y colocarlo al inicio del flex*/
     display: flex;
     flex-direction: row-reverse; 
     align-items: flex-start;
@@ -60,10 +61,12 @@ p{
     margin-right: 0.5em; 
 }
 
+/* X visible para moviles*/
 .options .fas {
     display: inherit;
   }
 
+  /* Agregando Hover al menu en Laptop y Escritorio */
 #menu a:hover {
     color: red;
 }
@@ -107,6 +110,7 @@ a.hide-desktop {
     text-decoration: none;
 }
 
+/* Aplicando diseño a los logos de github y twitter */
 .social-links li a i {
     display: flex;
     align-items: flex-start;
@@ -114,6 +118,7 @@ a.hide-desktop {
     margin: 10px 10px;
   }
 /*----------------------------------------------------------------------------------------*/
+/* Agregando la flecha aqua a la pagina y dandole diseño */
 .fa-arrow-circle-down {
     padding: 0;
     margin-top: 0.5em;
@@ -139,11 +144,12 @@ a.hide-desktop {
 }
 
 .post ul {
+/* regla que evita el despliegue tipo lista*/
+
     display: flex; 
     list-style: none;
     flex-flow: row wrap;
     justify-content: center;
-
 
 }
 
@@ -153,7 +159,8 @@ a.hide-desktop {
     margin: 2rem auto;
 }
 
-.post ul li article {
+/* editando articulo*/
+.post ul li article { 
     overflow: hidden;
     border-radius: 10px;
     background-color: #ffffff;
@@ -161,6 +168,8 @@ a.hide-desktop {
     padding-bottom: 1em;
     margin: 1em;
 }
+
+/* edita las imagenes del articulo*/
 
 .post article img{
     height: 150px;
@@ -186,7 +195,7 @@ a.hide-desktop {
 }
 
 /* About */
-
+/* Agregando margen al container de about */
 .about .container {
     margin: 1em;
   }
@@ -217,6 +226,8 @@ a.hide-desktop {
 }
 
 .contact {
+/* Desplegando flex para clase .contact */
+
     display: flex;
     text-align: left;
     padding: 0px 1em;
@@ -312,6 +323,7 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
+/* Se trata de la misma manera que moviles solo cambaindo diseño, margenes,  padding, etc*/
   
     .header{
         padding: 1em 1.5em 2em;
@@ -411,6 +423,7 @@ footer .social-links {
 } 
 
 @media only screen and (min-width: 1024px) {
+/*cambios de diseño y cambio en el orden del about container*/
 
     header{
         margin-bottom: 1em;
@@ -520,6 +533,7 @@ footer .social-links {
 }
 
 @media only screen and (min-width: 1440px) {
+/* peuqeños cambios al diseño de laptop*/
     
     .container {
         width: 80%;
