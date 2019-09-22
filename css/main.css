@@ -39,7 +39,7 @@ p{
 
 .logo {
     width: 110px;
-    margin: 1em 2.5em;
+    margin: 1em 2.5em 2em;
 }
 
 .options {
@@ -48,7 +48,7 @@ p{
     position: relative;
     top: 30%;
     right: 95%;
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     display: flex;
     flex-direction: row-reverse; 
@@ -64,7 +64,15 @@ p{
     display: inherit;
   }
 
+#menu a:hover {
+    color: red;
+}
+  
+
 /* Big area */
+.big-hero {
+    margin-bottom: 4em;
+  }  
 .big-hero img {
     width: 150px;
 }
@@ -80,9 +88,8 @@ a.hide-desktop {
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    font-size: 0.9em;;
     color: #D7DEE6;
-
 }
 
 /* Social links*/
@@ -118,13 +125,11 @@ a.hide-desktop {
     background-color: #0AC693; 
 }
 
-
 .post {
     padding: 1em;
     margin-top: 1.5em; 
     margin-left: 1em; 
     margin-right: 1em; 
-    margin-bottom: -2px;
 }
 .post h2 {
     text-transform: uppercase;
@@ -134,7 +139,12 @@ a.hide-desktop {
 }
 
 .post ul {
+    display: flex; 
     list-style: none;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
 }
 
 .post ul li {
@@ -148,7 +158,7 @@ a.hide-desktop {
     border-radius: 10px;
     background-color: #ffffff;
     text-align: left;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     margin: 1em;
 }
 
@@ -183,17 +193,19 @@ a.hide-desktop {
   
 .about{
     margin-top: 2em;
+    margin-bottom: 3em; 
 }
 
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.125em;
+    font-size: 1.180em;
     margin: 2em;
 }
 
 .bio-info img{
    width: 200px;
+   margin-bottom: 1em; 
 }
 
 .bio-info p{
@@ -206,7 +218,6 @@ a.hide-desktop {
 
 .contact {
     display: flex;
-    flex-direction: column;
     text-align: left;
     padding: 0px 1em;
 }
@@ -269,9 +280,9 @@ footer .social-links {
 }
 
 .hide-mobile {
-    display: none;
-  }
-  
+  display: none;
+}
+
 .menu {
     background-color: #112935;
     position: absolute;
@@ -302,6 +313,24 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
+    .header{
+        padding: 1em 1.5em 2em;
+      
+    }
+
+    .menu li{
+        margin-top: 0;
+    }
+
+    .menu li a {
+        font-size: 1em;
+      }
+
+    .post {
+        padding: 0.5em;
+        margin: 1em 1em -2px;
+    }
+
     .post ul {
         list-style: none;
         display: flex;
@@ -311,9 +340,22 @@ footer .social-links {
     
     .post ul li {
         min-height: 350px;
+        min-width: 65%;
         max-height: 3500px;
         margin: 1rem 2rem;
-        flex: 1 0 300px;
+        flex: 1 0 800px;
+    }
+
+    .post ul li article {
+        overflow: hidden; 
+        border-radius: 10px;
+        background-color: #ffffff;
+        text-align: left;
+        margin: 1em;
+    }
+  
+    .post article p {
+    line-height: 40px;
     }
 
 
@@ -340,26 +382,255 @@ footer .social-links {
         margin-top: 1em;
     }
 
-
-
-
-    /*TODO: FALTA CSS */
+    .bio-info{
+        padding: 0 2em;
+    }
+      
+    
+    .bio-info img {
+        width: 150px;
+        margin-bottom: 1em;
+    }
+    
+    .bio-info p {
+        font-size: 18px;
+        padding: 1em 2em 2em;
+        text-align: left;
+        line-height: 30px;
+        letter-spacing: 2px;
+    }
+      
+    .contact {
+        text-align: left;
+        padding: 0 4em;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
 } 
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
+    header{
+        margin-bottom: 1em;
+    }
+
+    .logo{
+        width: 150px;
+        margin-top: 2em;
+    }
+
+    .big-hero p{
+        font-size: 1em;
+    }
+
+    .social-links{
+        margin-top: 2em;
+    }
+
+    .post {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .post ul {
+        display: flex;
+        flex-wrap: nowrap; 
+        list-style: none;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+  
+    .post ul li {
+        min-height: 250px;
+        min-width: 38%;
+        padding-left: 3em;
+        padding-right: 3em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .post ul li article {
+        overflow: hidden;
+        min-height: 100%;
+        border-radius: 10px;   
+        background-color: #ffffff;
+        text-align: left;
+        margin: 0 0.2em;
+    }
+
+    article{
+        margin: 0;
+    }
+
+    .post article h3 {
+        white-space: nowrap;
+    }
+
+    .post article p {
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+
+    .about .container{
+        display: flex;
+        flex-flow: row wrap; 
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .about .container h2{
+        width: 100%;
+        font-size: 1rem;
+        margin: 1em 0em 2em;
+    }
+
+    .about .container>div{
+        width: 50%;
+    }
+
+    .bio-info{
+        padding-left: 10em;
+    }
+
+    .bio-info img{
+        width: 220px;
+        margin-left: 0;
+    }
+
+    .bio-info p{
+        font-size: 1em;
+        line-height: 25px;
+    }
+
+    .contact{
+        padding-right: 2em;
+    }
+
+    .contact-form input[type="submit"] {
+        width: 50%; 
+        font-size: 1.2rem;
+    }
 
 
 
 }
 
 @media only screen and (min-width: 1440px) {
-
-    /*TODO: FALTA CSS */
+    
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
+
+    header{
+        margin-bottom: 1em;
+    }
+
+    .logo{
+        width: 150px;
+        margin-top: 2em;
+    }
+
+    .big-hero p{
+        font-size: 1em;
+    }
+
+    .social-links{
+        margin-top: 2em;
+    }
+
+    .post {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .post ul {
+        display: flex;
+        flex-wrap: nowrap; 
+        list-style: none;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+  
+    .post ul li {
+        min-height: auto;
+        min-width: 20%;
+        padding-left: 3em;
+        padding-right: 3em;
+        margin-left: 2em;
+        margin-right: 4%;
+    }
+
+    .post ul li article {
+        overflow: hidden;
+        min-height: 100%;
+        border-radius: 10px;   
+        background-color: #ffffff;
+        text-align: left;
+        margin: 0 0.2em;
+    }
+
+    article{
+        margin: 0;
+    }
+
+    .post article h3 {
+        white-space: nowrap;
+    }
+
+    .post article p {
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+
+    .about .container{
+        display: flex;
+        flex-flow: row wrap; 
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .about .container h2{
+        width: 100%;
+        font-size: 1rem;
+        margin: 1em 0em 2em;
+    }
+
+    .about .container>div{
+        width: 50%;
+        padding: 0 2.5em; 
+    }
+
+    .bio-info{
+        padding-left: 10em;
+    }
+
+    .bio-info img{
+        width: 220px;
+        margin-left: 0;
+    }
+
+    .bio-info p{
+        font-size: 1em;
+        line-height: 25px;
+    }
+
+    .contact{
+        padding-right: 2em;
+    }
+
+    .contact-form input[type="submit"] {
+        width: 50%; 
+        font-size: 1.2rem;
+    }
+
+
+
 }
